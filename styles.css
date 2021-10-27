@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+:root {
+    /* primary colors */
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    /* neutral colors */
+    --primary-color-white: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+}
+
+.container {
+    background-color: var(--Dark-desaturated-blue);
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 15%;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.info {
+    display: block;
+    margin: 2% 1% 0 5%;
+    padding: 10px 1px;
+    flex-wrap: wrap;
+}
+
+.data {
+    font-family: 'Inter', sans-serif;
+    margin: 40px 0;
+}
+
+.data span {
+    color: var(--Soft-violet);
+}
+
+.data h1 {
+    color: var(--primary-color-white);
+    margin: 0 70px 25px 0;
+}
+
+.data span, h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.data p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--Slightly-transparent-white-main);
+    font-size: 1em;
+    margin: 0 70px 0 0;
+}
+
+.stats-container {
+    display: flex;
+    color: var(--Slightly-transparent-white-stats);
+}
+
+.stats {
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    margin: 0 40px 0 0;
+    text-transform: uppercase;
+}
+
+.stats h2 {
+    margin: 0 0 .5rem 0;
+    font-weight: 700;
+    color: var(--primary-color-white);
+}
+
+.stats p {
+    font-weight: 400;
+    color: var(--Slightly-transparent-white-stats);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-fx {
+    background: url('img/image-header-desktop.jpg');
+    background-size: cover;
+    background-color: var(--Soft-violet);
+    background-blend-mode: multiply;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.app {
+    display: none;
+}
+
+
+/* TABLETS */
+@media all (max-width: 1024px) {
+    .container {
+        top: 5%; bottom: 5%; left: 7%; right: 7%;
+        background-color: var(--Dark-desaturated-blue);
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .data h1 {
+        margin: -1rem 2rem 1rem 1rem;
+    }
+
+    .data span, h1 {
+        font-size: 4.5rem;
+    }
+
+    .data p {
+        text-align: center;
+        font-size: 2.2rem;
+        margin: .7rem 5rem 2rem 5rem;
+        line-height: 1.5;
+    }
+
+    .stats-container {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        margin: -1rem 0 3rem 0;
+    }
+
+    .stats h2 {
+        margin: 0 0 .5rem 0;
+        font-size: 3.2rem;
+    }
+
+    .stats p {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .image-fx {
+        background: url('img/image-header-mobile.jpg');
+        background-size: cover;
+        background-color: var(--Soft-violet);
+        background-blend-mode: multiply;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .app {
+        display: flex;
+        width: 100%; height: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+    .container {
+        top: 5%; bottom: 5%; left: 7%; right: 7%;
+        background-color: var(--Dark-desaturated-blue);
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .data h1 {
+        margin: -1rem 2rem 1rem 1rem;
+    }
+
+    .data span, h1 {
+        font-size: 3rem;
+    }
+
+    .data p {
+        text-align: center;
+        font-size: 1.6rem;
+        margin: .7rem 5rem 0 5rem;
+        line-height: 1.5;
+    }
+
+    .stats-container {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        margin: -1rem 0 3rem 0;
+    }
+
+    .stats h2 {
+        margin: 0 0 .5rem 0;
+        font-size: 2rem;
+    }
+
+    .stats p {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .image-fx {
+        background: url('img/image-header-mobile.jpg');
+        background-size: cover;
+        background-color: var(--Soft-violet);
+        background-blend-mode: multiply;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .app {
+        display: flex;
+        width: 100%; height: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* VISTA MOVIL */
+@media (min-width: 375px) and (max-width: 750px) {
+    .container {
+        top: 5%; bottom: 5%; left: 7%; right: 7%;
+        background-color: var(--Dark-desaturated-blue);
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .data h1 {
+        margin: -1rem 2rem 1rem 1rem;
+    }
+
+    .data span, h1 {
+        font-size: 1.8rem;
+    }
+
+    .data p {
+        text-align: center;
+        font-size: 1rem;
+        margin: .7rem 2rem 0 1rem;
+        line-height: 1.8;
+    }
+
+    .stats-container {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        margin: -1rem 0 3rem 0;
+    }
+
+    .stats h2 {
+        margin: 0 0 .5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .stats p {
+        font-size: .8rem;
+        letter-spacing: 2px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .image-fx {
+        background: url('img/image-header-mobile.jpg');
+        background-size: cover;
+        background-color: var(--Soft-violet);
+        background-blend-mode: multiply;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .app {
+        display: flex;
+        width: 100%; height: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+}
